@@ -1,0 +1,19 @@
+{
+  "name": "morganobject",
+  "version": "0.0.1",
+  "description": "A pretty useless module",
+  "main": "morgan.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BlueBurgersTDD/MorganModule.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BlueBurgersTDD/MorganModule/issues"
+  },
+  "homepage": "https://github.com/BlueBurgersTDD/MorganModule#readme"
+}

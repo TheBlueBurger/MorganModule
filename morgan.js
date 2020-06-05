@@ -1,16 +1,14 @@
-
-
 const morgan = {
     boredom: -69,
     minBored: 0,
     maxBored: 10,
     setBoredom: (boredom) => {
-        morgan.boredom = boredom;
-        return morgan.getBoredomLevel();
+        this.boredom = boredom;
+        return this.getBoredomLevel();
     },
     setMinMaxBoredom: (min, max) => {
-        morgan.minBored = min || morgan.minBored;
-        morgan.maxBored = max || morgan.maxBored;
+        this.minBored = min || this.minBored;
+        this.maxBored = max || this.maxBored;
         return {min:min, max:max};
     },
     getMaxBoredomLevel: () => {
@@ -20,18 +18,18 @@ const morgan = {
         return minBored;
     },
     getBoredomLevel: () => {
-        let randBoredom = Math.floor(Math.random() * morgan.getMaxBoredomLevel() + 1);
-        if(randBoredom != morgan.boredom && morgan.boredom != -69) { // if its not deafult it will set it i dont think anyone will set it to -69 cus its out of range anyway
-            randBoredom = morgan.boredom;
+        let randBoredom = Math.floor(Math.random() * this.getMaxBoredomLevel() + 1);
+        if(randBoredom != this.boredom && this.boredom != -69) { // if its not deafult it will set it i dont think anyone will set it to -69 cus its out of range anyway
+            randBoredom = this.boredom;
         }
-        if(randBoredom < morgan.getMinBoredomLevel || randBoredom > morgan.getMaxBoredomLevel) {
-            throw new RangeError("Morgan is too bored!!")
+        if(randBoredom < this.getMinBoredomLevel || randBoredom > this.getMaxBoredomLevel) {
+            throw new RangeError("this is too bored!!")
         } else {
             return randBoredom;
         }
     },
     isBored: () => {
-        return morgan.getBoredomLevel() > morgan.getMinBoredomLevel();
+        return this.getBoredomLevel() > this.getMinBoredomLevel();
     },
     brain: {
         think: (about, cb) => {
@@ -58,3 +56,4 @@ const morgan = {
     */
 
 }
+module.exports = morgan;
