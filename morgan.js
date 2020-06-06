@@ -12,13 +12,13 @@ const morgan = {
         return {min:min, max:max};
     },
     getMaxBoredomLevel: () => {
-        return maxBored;
+        return morgan.maxBored;
     },
     getNicknames: () => {
         return ["TheCodeMesser", "TheCodeSkidder", "TheDesignMesser", "xlagroskinix", "Clyde69"];
     },
     getMinBoredomLevel: () => {
-        return minBored;
+        return morgan.minBored;
     },
     getBoredomLevel: () => {
         let randBoredom = Math.floor(Math.random() * morgan.getMaxBoredomLevel() + 1);
