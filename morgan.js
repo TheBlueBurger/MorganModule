@@ -9,13 +9,18 @@ const morgan = {
     setMinMaxBoredom: (min, max) => {
         morgan.minBored = min || morgan.minBored;
         morgan.maxBored = max || morgan.maxBored;
+        morgan.minBored = min == undefined ? morgan.minBored : min;
+        morgan.maxBored = max == undefined ? morgan.maxBored : max;
         return {min:min, max:max};
     },
     getMaxBoredomLevel: () => {
-        return maxBored;
+        return morgan.maxBored;
+    },
+    getNicknames: () => {
+        return ["TheCodeMesser", "TheCodeSkidder", "TheDesignMesser", "xlagroskinix", "Clyde69"];
     },
     getMinBoredomLevel: () => {
-        return minBored;
+        return morgan.minBored;
     },
     getBoredomLevel: () => {
         let randBoredom = Math.floor(Math.random() * morgan.getMaxBoredomLevel() + 1);
@@ -23,9 +28,7 @@ const morgan = {
             randBoredom = morgan.boredom;
         }
         if(randBoredom < morgan.getMinBoredomLevel || randBoredom > morgan.getMaxBoredomLevel) {
-            throw new RangeError("morgan is too bored!!")
-        } else {
-            return randBoredom;
+            throw new RangeError("morgan is too bored!!");
         }
     },
     isBored: () => {
@@ -43,7 +46,8 @@ const morgan = {
             setTimeout(() => {cb(`ok im done thinking ${about} is very big (/shrug :dogdance-1:)`)}, 1000 * Math.floor(Math.random() * 15));
         },
         doSomething: () => {
-            let quotes = ["ok i did something bye bye", "AAAAAAAAAAAAAAAAAA", "no u", "hm nu", "oh ok", "working on util...", "working on morgzhack...", "working on recyclebot..."];
+            let quotes = ["ok i did something bye bye", "AAAAAAAAAAAAAAAAAA", "no u", "hm nu", "oh ok", "working on util...",
+             "working on morgzhack...", "working on recyclebot..."];
             return quotes[Math.floor(Math.random() * quotes.length)];
         },
 
