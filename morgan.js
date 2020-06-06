@@ -34,7 +34,7 @@ const morgan = {
     brain: {
         think: (about, cb) => {
             if(about == null) {
-                about = "ur mom";
+                about = "morgan";
             }
             if(cb == null) {
                 cb = (res) => {console.log(res)};
