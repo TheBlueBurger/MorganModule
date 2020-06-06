@@ -40,7 +40,7 @@ const morgan = {
                 cb = (res) => {console.log(res)};
             }
             cb("hmmmmmmmmmm me thinking so shut ;]");
-            setTimeout(() => {cb(`ok im done thinking ${about} is very big (/shrug :dogdance-1: btw ur mom gay)`)}, 1000 * Math.floor(Math.random() * 15));
+            setTimeout(() => {cb(`ok im done thinking ${about} is very big (/shrug :dogdance-1:)`)}, 1000 * Math.floor(Math.random() * 15));
         },
         doSomething: () => {
             let quotes = ["ok i did something bye bye", "AAAAAAAAAAAAAAAAAA", "no u", "hm nu", "oh ok", "working on util...", "working on morgzhack...", "working on recyclebot..."];

@@ -1,6 +1,6 @@
 {
   "name": "morganobject",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "A pretty useless module",
   "main": "morgan.js",
   "scripts": {
