@@ -13,6 +13,10 @@ const morgan = {
         morgan.maxBored = max == undefined ? morgan.maxBored : max;
         return {min:min, max:max};
     },
+    getLegalityLevel: () => {
+        var legality = Math.floor(Math.random() * 69);
+        return legality;
+    },
     getMaxBoredomLevel: () => {
         return morgan.maxBored;
     },
