@@ -30,6 +30,7 @@ const morgan = {
         if(randBoredom < morgan.getMinBoredomLevel || randBoredom > morgan.getMaxBoredomLevel) {
             throw new RangeError("morgan is too bored!!");
         }
+        return randBoredom;
     },
     isBored: () => {
         return morgan.getBoredomLevel() > morgan.getMinBoredomLevel();
