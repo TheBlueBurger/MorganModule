@@ -3,12 +3,12 @@ const morgan = {
     minBored: 0,
     maxBored: 10,
     setBoredom: (boredom) => {
-        this.boredom = boredom;
-        return this.getBoredomLevel();
+        morgan.boredom = boredom;
+        return morgan.getBoredomLevel();
     },
     setMinMaxBoredom: (min, max) => {
-        this.minBored = min || this.minBored;
-        this.maxBored = max || this.maxBored;
+        morgan.minBored = min == undefined ? morgan.minBored : min;
+        morgan.maxBored = max == undefined ? morgan.maxBored : max;
         return {min:min, max:max};
     },
     getMaxBoredomLevel: () => {
@@ -18,23 +18,23 @@ const morgan = {
         return minBored;
     },
     getBoredomLevel: () => {
-        let randBoredom = Math.floor(Math.random() * this.getMaxBoredomLevel() + 1);
-        if(randBoredom != this.boredom && this.boredom != -69) { // if its not deafult it will set it i dont think anyone will set it to -69 cus its out of range anyway
-            randBoredom = this.boredom;
+        let randBoredom = Math.floor(Math.random() * morgan.getMaxBoredomLevel() + 1);
+        if(randBoredom != morgan.boredom && morgan.boredom != -69) { // if its not deafult it will set it i dont think anyone will set it to -69 cus its out of range anyway
+            randBoredom = morgan.boredom;
         }
-        if(randBoredom < this.getMinBoredomLevel || randBoredom > this.getMaxBoredomLevel) {
+        if(randBoredom < morgan.getMinBoredomLevel || randBoredom > morgan.getMaxBoredomLevel) {
             throw new RangeError("this is too bored!!")
         } else {
             return randBoredom;
         }
     },
     isBored: () => {
-        return this.getBoredomLevel() > this.getMinBoredomLevel();
+        return morgan.getBoredomLevel() > morgan.getMinBoredomLevel();
     },
     brain: {
         think: (about, cb) => {
             if(about == null) {
-                about = "morgan";
+                about = "ur mom";
             }
             if(cb == null) {
                 cb = (res) => {console.log(res)};
@@ -43,7 +43,8 @@ const morgan = {
             setTimeout(() => {cb(`ok im done thinking ${about} is very big (/shrug :dogdance-1:)`)}, 1000 * Math.floor(Math.random() * 15));
         },
         doSomething: () => {
-            let quotes = ["ok i did something bye bye", "AAAAAAAAAAAAAAAAAA", "no u", "hm nu", "oh ok", "working on util...", "working on morgzhack...", "working on recyclebot..."];
+            let quotes = ["ok i did something bye bye", "AAAAAAAAAAAAAAAAAA", "no u", "hm nu", "oh ok", "working on util...",
+             "working on morgzhack...", "working on recyclebot..."];
             return quotes[Math.floor(Math.random() * quotes.length)];
         },
 
