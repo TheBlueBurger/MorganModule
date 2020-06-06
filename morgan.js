@@ -14,6 +14,9 @@ const morgan = {
     getMaxBoredomLevel: () => {
         return maxBored;
     },
+    getNicknames: () => {
+        return ["TheCodeMesser", "TheCodeSkidder", "TheDesignMesser", "xlagroskinix", "Clyde69"];
+    },
     getMinBoredomLevel: () => {
         return minBored;
     },
