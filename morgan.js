@@ -22,7 +22,7 @@ const morgan = {
         if(randBoredom != morgan.boredom && morgan.boredom != -69) { // if its not deafult it will set it i dont think anyone will set it to -69 cus its out of range anyway
             randBoredom = morgan.boredom;
         }
-        if(randBoredom < morgan.getMinBoredomLevel || randBoredom > morgan.getMaxBoredomLevel) {
+        if(randBoredom < morgan.getMinBoredomLevel() || randBoredom > morgan.getMaxBoredomLevel()) {
             throw new RangeError("this is too bored!!")
         } else {
             return randBoredom;
