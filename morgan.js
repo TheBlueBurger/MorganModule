@@ -56,6 +56,16 @@ const morgan = {
             return quotes[Math.floor(Math.random() * quotes.length)];
         },
 
+    },
+    setupToMorgan: () => {
+        Array.prototype.toMorgan = function() {
+            let yes = this.valueOf();
+            for(var i = 0; i < yes.length; i++){
+            yes[i] = 69;
+            };
+             return yes;
+            };
+            return "Done yes yes legal do Array.toMorgan()";
     }
     /*
     TODO:
