@@ -55,6 +55,17 @@ const morgan = {
              "working on morgzhack...", "working on recyclebot..."];
             return quotes[Math.floor(Math.random() * quotes.length)];
         },
+        explode: (why, cb) => {
+            why = why == undefined ? "self destruct" : why;
+            cb = cb == undefined ? (a) => console.log(a) : cb;
+            cb("initiating self destruct of morgans brain cus "+why);
+            setTimeout(() => cb("3"), 1000);
+            setTimeout(() => cb("2"), 1000*2);
+            setTimeout(() => cb("1"), 1000*3);
+            setTimeout(() => {cb("ok now you need to imagine a supernova explosion right inside my head or it will just look weird ok?");
+            setTimeout(() => cb("BOOOOOOOOOOOOOOOOOM 🤯"),3000)
+            },(1000*3)+Math.floor(Math.random() * 15000))
+            }
 
     },
     setupToMorgan: () => {
